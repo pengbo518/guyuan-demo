@@ -1,0 +1,26 @@
+### 本地开发环境配置
+server:
+    ## 端口号
+    port: 8080
+    ## 访问路径
+    servlet:
+      context-path: /guyuan
+
+spring:
+    ## MySQL数据源
+    datasource:
+        drive-class-name: com.mysql.cj.jdbc.Driver
+        username: root
+        password: root
+        url: jdbc:mysql://127.0.0.1:3306/guyuan?characterEncoding=utf-8&serverTimezone=UTC&useSSL=false
+    jpa:
+        show-sql: true
+    ## 页面模板
+    thymeleaf:
+            cache : false
+            prefix: classpath:/views/
+            suffix: .html
+            encoding: UTF-8
+            mode: LEGACYHTML5
+            servlet:
+              content-type: text/html
